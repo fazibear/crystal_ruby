@@ -1,4 +1,4 @@
-require "lib_ruby"
+require "./lib_ruby"
 
 struct Nil
   def to_ruby
@@ -54,5 +54,5 @@ module Ruby
 end
 
 macro ruby_extension(name, code)
-  {{ run "processor", name, code }}
+  {{ run "./processor", name, code }}
 end
